@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { getAccount } from './connect';
+import { connectWallet } from './connect';
 import { preAuth } from './preauth';
 
 export async function run() {
@@ -55,7 +55,7 @@ export async function run() {
   const arg = process.argv.slice(2)
   switch (arg[0]) {
     case 'connect':
-      await getAccount(config);
+      await connectWallet(config);
       break;
     case 'preauth':
       await preAuth(config);

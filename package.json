@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
-    "preauth": "node dist/index.js preauth",
-    "connect": "node dist/index.js connect"
+    "preauth": "npx tsc && node dist/index.js preauth",
+    "connect": "npx tsc && node dist/index.js connect"
   },
   "keywords": [],
   "author": "",
